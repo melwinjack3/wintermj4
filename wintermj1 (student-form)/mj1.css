@@ -1,0 +1,5 @@
+.bass{position: absolute;background-color: black;height: 100%;width: 100%;top: 0;left: 0;opacity: 0.8;}
+table{color:white; z-index: 1;position: absolute;padding: 20px; left: 35%;}
+td{padding: 20px;}
+.E{background-color: darkred;position: absolute;color: white;bottom: 200px;left: 450px;padding: 20px;width: 100px;}
+.S{background-color: darkgreen;position: absolute;color: white;bottom: 200px;left: 700px;padding: 19px;width: 100px;}

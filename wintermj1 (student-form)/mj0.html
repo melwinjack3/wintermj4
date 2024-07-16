@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Todo List</title>
+    <link rel="stylesheet" href="mj0.css">
+</head>
+<body>
+<center>
+    <table id="t1">
+        <caption>STUDENT FORM</caption>
+        <tr>
+            <td>Name</td>
+            <td><input id="N" type="text" placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input id="A" type="number" placeholder="Enter your age"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td id="G">
+                <input type="radio" value="male" name="mg"> Male
+                <input type="radio" value="female" name="mg"> Female
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select id="C">
+                    <option></option>
+                    <option value="c">C</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input id="E" type="email" placeholder="Enter your email"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="bt1" onclick="fun()">NEXT</button></td>
+        </tr>
+    </table>
+</center>
+
+<script>
+function fun() {
+    var N1 = document.getElementById("N");
+    var A1 = document.getElementById("A");
+    var C1 = document.getElementById("C");
+    var E1 = document.getElementById("E");
+
+    if (!N1.value) {
+        alert("Please Enter Your Name");
+        return;
+    }
+    if (!A1.value) {
+        alert("Please Enter Your Age");
+        return;
+    }
+    if (!C1.value) {
+        alert("Please Choose a Course");
+        return;
+    }
+    if (!E1.value) {
+        alert("Please Enter Your Email");
+        return;
+    }
+
+    var g = document.querySelector('input[name="mg"]:checked');
+    if (!g) {
+        alert("Please select your gender");
+        return;
+    }
+    localStorage.setItem("name", N1.value);
+    localStorage.setItem("age", A1.value);
+    localStorage.setItem("gender", g.value);
+    localStorage.setItem("course", C1.value);
+    localStorage.setItem("email", E1.value);
+
+    window.location.href = "mj1.html";
+}
+</script>
+<style>
+/* Add your existing styles here */
+</style>
+</body>
+</html>

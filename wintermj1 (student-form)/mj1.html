@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mj1.css">
+    <title>Student Details</title>
+</head>
+<body>
+    <div class="bass"></div>
+    <table>
+        <tr>
+            <td>Name   : </td><td class="d1"></td>
+        </tr>
+        <tr>
+            <td>Age    : </td><td class="d2"></td>
+        </tr>
+        <tr>
+            <td>Gender : </td><td class="d3"></td>
+        </tr>
+        <tr>
+            <td>Course : </td><td class="d4"></td>
+        </tr>
+        <tr>
+            <td>Email  : </td><td class="d5"></td>
+        </tr>
+    </table>
+    <button class="E">Edit</button>
+    <button class="S">Save</button>
+
+<script>
+    // Retrieve data from localStorage
+    document.querySelector(".d1").textContent = localStorage.getItem("name");
+    document.querySelector(".d2").textContent = localStorage.getItem("age");
+    document.querySelector(".d3").textContent = localStorage.getItem("gender");
+    document.querySelector(".d4").textContent = localStorage.getItem("course");
+    document.querySelector(".d5").textContent = localStorage.getItem("email");
+
+    document.querySelector(".S").addEventListener("click", function() {
+        alert("Your Details Saved");
+    });
+
+    document.querySelector(".E").addEventListener("click", function() {
+        window.location.href = "mj0.html";
+    });
+</script>
+
+</body>
+</html>
